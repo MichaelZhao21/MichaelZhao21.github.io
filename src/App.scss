@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');
 
-html, body, #root {
+html,
+body,
+#root {
     height: 100%;
     margin: 0;
     background-color: #212121;
@@ -14,4 +16,16 @@ html, body, #root {
     font-family: 'Space Mono', monospace;
     font-size: 5rem;
     color: white;
+    line-height: 0.9em;
+    border-right: solid 20px white;
+    animation: typing-cursor 1.75s infinite step-end;
+}
+
+@keyframes typing-cursor {
+    0% {
+        border-right-color: white;
+    }
+    50% {
+        border-right-color: transparent;
+    }
 }
