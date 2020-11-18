@@ -18,7 +18,7 @@ body,
     color: white;
     line-height: 0.9em;
     border-right: solid 20px white;
-    animation: typing-cursor 1.75s infinite step-end;
+    animation: typing-cursor 1.75s step-end 0s infinite;
 }
 
 @keyframes typing-cursor {
