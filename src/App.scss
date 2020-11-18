@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');
+
+html, body, #root {
+    height: 100%;
+    margin: 0;
+    background-color: #212121;
+}
+
+.name {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Space Mono', monospace;
+    font-size: 5rem;
+    color: white;
+}

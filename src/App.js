@@ -3,7 +3,7 @@ import './App.scss';
 function App() {
   return (
     <div className="App">
-      <h1>Michael Zhao</h1>
+      <div className="name">Michael Zhao</div>
     </div>
   );
 }
