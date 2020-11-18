@@ -6,19 +6,23 @@ body,
     height: 100%;
     margin: 0;
     background-color: #212121;
+    font-size: 2vw;
+}
+
+.spacer {
+    height: 5rem;
 }
 
 .name {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
+    margin: 0 auto;
+    width: fit-content;
     font-family: 'Space Mono', monospace;
     font-size: 5rem;
     color: white;
-    line-height: 0.9em;
-    border-right: solid 20px white;
-    animation: typing-cursor 1.75s step-end 0s infinite;
+    line-height: 4.25rem;
+    border-right: solid 1.25rem white;
+    animation: typing-cursor 1.5s step-end 0s infinite;
+    animation-iteration-count: 10;
 }
 
 @keyframes typing-cursor {
@@ -27,5 +31,14 @@ body,
     }
     50% {
         border-right-color: transparent;
+    }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+    html,
+    body,
+    #root {
+        font-size: 18px;
     }
 }

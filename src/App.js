@@ -33,6 +33,7 @@ class App extends React.Component {
     render() {
         return (
             <div className="App">
+                <div className="spacer"></div>
                 <div className="name">{this.state.name}</div>
             </div>
         );
