@@ -20,17 +20,17 @@ body,
     font-size: 5rem;
     color: white;
     line-height: 4.25rem;
-    border-right: solid 1.25rem white;
-    animation: typing-cursor 1.5s step-end 0s infinite;
-    animation-iteration-count: 10;
+    border-right: none;
+    animation: typing-cursor 1.5s step-end 0s 10;
+    animation-iteration-count: 5;
 }
 
 @keyframes typing-cursor {
     0% {
-        border-right-color: white;
+        border-right: solid 1.25rem transparent;
     }
     50% {
-        border-right-color: transparent;
+        border-right: solid 1.25rem white;
     }
 }
 
