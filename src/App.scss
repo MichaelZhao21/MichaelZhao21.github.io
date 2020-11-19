@@ -25,12 +25,34 @@ body,
     animation-iteration-count: 5;
 }
 
+.earth {
+    position: absolute;
+    top: 20rem;
+    left: 0;
+    right: 0;
+    width: 10rem;
+    margin: auto;
+    animation: floating 3s ease-in-out infinite;
+}
+
 @keyframes typing-cursor {
     0% {
         border-right: solid 1.25rem transparent;
     }
     50% {
         border-right: solid 1.25rem white;
+    }
+}
+
+@keyframes floating {
+    0% {
+        transform: translate(0, 0);
+    }
+    50% {
+        transform: translate(0, 2rem);
+    }
+    100% {
+        transform: translate(0, 0);
     }
 }
 

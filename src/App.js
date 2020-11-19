@@ -35,6 +35,7 @@ class App extends React.Component {
             <div className="App">
                 <div className="spacer"></div>
                 <div className="name">{this.state.name}</div>
+                <img className="earth" src="https://api.michaelzhao.xyz/images/michaelzhao/earth.png" alt=""></img>
             </div>
         );
     }
