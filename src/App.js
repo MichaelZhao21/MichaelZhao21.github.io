@@ -1,6 +1,8 @@
 import React from 'react';
 import './App.scss';
 
+const STARS = 100;
+
 class App extends React.Component {
     constructor(props) {
         super(props);
@@ -8,9 +10,28 @@ class App extends React.Component {
         this.name = 'Michael Zhao';
         this.nameCount = 0;
         this.nameTimer = null;
+        this.canvas = React.createRef();
+        this.root = React.createRef();
+    }
+
+    resizeCanvas = () => {
+        this.height = this.root.current.clientHeight;
+        this.width = this.root.current.clientWidth;
+		this.canvas.current.height = this.height;
+        this.canvas.current.width = this.width;
+
+        var ctx = this.canvas.current.getContext('2d');
+        ctx.fillStyle = '#EEEEEE';
+        for (var i = 0; i < STARS; i++) {
+            ctx.fillRect(randInt(1, this.width), randInt(1, this.height), 4, 4);
+        }
     }
 
     componentDidMount() {
+        // Set background size
+        this.resizeCanvas();
+        window.addEventListener('resize', this.resizeCanvas);
+
         this.nameTimer = setInterval(() => {
             // Stop the typing if end of the string
             if (this.nameCount > this.name.length) {
@@ -32,13 +53,23 @@ class App extends React.Component {
 
     render() {
         return (
-            <div className="App">
+            <div className="App" ref={this.root}>
+                <canvas className="background" ref={this.canvas}></canvas>
                 <div className="spacer"></div>
                 <div className="name">{this.state.name}</div>
                 <img className="earth" src="https://api.michaelzhao.xyz/images/michaelzhao/earth.png" alt=""></img>
             </div>
         );
     }
+}
+
+/**
+ * Generates a pseudorandom number in the range [min,max)
+ * @param {number} min Minimum Value (inclusive)
+ * @param {number} max Maximum Value (exclusive)
+ */
+function randInt(min, max) {
+    return Math.random() * (max - min) + min;
 }
 
 export default App;

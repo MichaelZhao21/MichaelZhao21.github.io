@@ -2,11 +2,21 @@
 
 html,
 body,
-#root {
+#root,
+.App {
     height: 100%;
     margin: 0;
     background-color: #212121;
     font-size: 2vw;
+    overflow-x: hidden;
+}
+
+canvas {
+    display: block;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
 }
 
 .spacer {
