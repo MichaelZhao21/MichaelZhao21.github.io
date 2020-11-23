@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');
 
+$back-color: #212121;
+
 html,
 body,
 #root,
@@ -8,11 +10,13 @@ body,
     margin: 0;
     background-color: transparent;
     font-size: 2vw;
+    font-family: 'Space Mono', monospace;
+    color: white;
     overflow-x: hidden;
 }
 
 body {
-    background-color: #212121 !important;
+    background-color: $back-color !important;
 }
 
 canvas {
@@ -23,6 +27,16 @@ canvas {
     left: 0;
 }
 
+a {
+    text-decoration: none;
+    color: gold;
+    transition: 0.3s;
+}
+
+a:hover {
+    color: goldenrod;
+}
+
 .spacer {
     height: 5rem;
 }
@@ -30,9 +44,7 @@ canvas {
 .name {
     margin: 0 auto;
     width: fit-content;
-    font-family: 'Space Mono', monospace;
     font-size: 5rem;
-    color: white;
     line-height: 4.25rem;
     border-right: none;
     animation: typing-cursor 1.5s step-end 0s 10;
@@ -40,13 +52,32 @@ canvas {
 }
 
 .earth {
-    position: absolute;
-    top: 20rem;
-    left: 0;
-    right: 0;
-    width: 10rem;
-    margin: auto;
     animation: floating 3s ease-in-out infinite;
+    display: block;
+    margin: auto;
+}
+
+.info {
+    margin: 5em 10em 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    text-align: right;
+}
+
+.info-item {
+    flex-basis: 50%;
+}
+
+.about {
+    font-size: 1.25rem;
+    background-color: $back-color;
+}
+
+.links {
+    font-size: 2rem;
+    text-align: left;
 }
 
 @keyframes typing-cursor {
@@ -60,13 +91,13 @@ canvas {
 
 @keyframes floating {
     0% {
-        transform: translate(0, 0);
+        transform: translate(0, -1rem);
     }
     50% {
-        transform: translate(0, 2rem);
+        transform: translate(0, 1rem);
     }
     100% {
-        transform: translate(0, 0);
+        transform: translate(0, -1rem);
     }
 }
 
@@ -76,5 +107,21 @@ canvas {
     body,
     #root {
         font-size: 18px;
+    }
+}
+
+@media only screen and (max-width: 1199px) {
+    .info {
+        margin: 1em 1em;
+        font-size: 2em !important;
+        flex-wrap: wrap;
+    }
+    .info-item {
+        flex-basis: 100%;
+        text-align: center;
+        font-size: 1em;
+    }
+    .links {
+        font-size: 2em !important;
     }
 }
