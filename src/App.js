@@ -65,7 +65,6 @@ class App extends React.Component {
                         ></img>
                     </div>
                     <div className="info-item links">
-                        <a href={data.blog}>Blog</a><br />
                         <a href={data.email}>Email</a><br />
                         <a href={data.github}>Github</a><br />
                         <a href={data.linkedin}>Linkedin</a><br />
