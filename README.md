@@ -4,6 +4,6 @@
 
 Hi! My name is Michael, and this is the repo for my personal website/blog. Check it out here: [https://michaelzhao.xyz](https://michaelzhao.xyz). If you want to talk about anything, my email is simply me@michaelzhao.xyz! Thanks for visiting <3
 
-![Bennett!](https://static.wikia.nocookie.net/gensin-impact/images/7/73/Character_Bennett_Portrait.png/revision/latest?cb=20200916170558)
+![Bennett!](https://api.michaelzhao.xyz/static/bennett-genshin.png)
 
 Bennett (from Genshin Impact) - all image credits go to MiHoYo
